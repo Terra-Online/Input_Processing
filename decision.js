@@ -98,7 +98,7 @@ function analyzeEvents(isSmooth) {
     //console.log(`sortedTimeITR: ${sortedTimeITR}`);
     //console.log(`trimmedTimeITR: ${trimmedTimeITR}`);
 
-    if (isSmooth || Math.abs(timeITR_Mean - 8) <= timeITR_StdDev + BOUNDARY_JITTER_THRESHOLD / 4 || Math.abs(timeITR_Mean - 16) <= timeITR_StdDev + BOUNDARY_JITTER_THRESHOLD / 4 || Math.abs(timeITR_Mean - 33) <= BOUNDARY_JITTER_THRESHOLD || Math.abs(timeITR_Max - 67) <= BOUNDARY_JITTER_THRESHOLD) { // In macOS, the default auto-smooth scroll interval series is around [8, 16, 33, 67]
+    if (isSmooth || Math.abs(timeITR_Mean - 8) <= timeITR_StdDev + BOUNDARY_JITTER_THRESHOLD / 4 || Math.abs(timeITR_Mean - 16) <= timeITR_StdDev + BOUNDARY_JITTER_THRESHOLD / 4 || Math.abs(timeITR_Mean - 33) <= BOUNDARY_JITTER_THRESHOLD || Math.abs(timeITR_Max - 67) <= BOUNDARY_JITTER_THRESHOLD) { // MacOS' auto-smooth scroll interval series is around 8, 16, 33, 67
         console.log('TouchPad(Auto-Smoothing)');
         const deltaXsSum = calculateSum(deltaXs);
         const deltaYsSum = calculateSum(deltaYs);
